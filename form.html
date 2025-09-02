@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Modern - Spreadsheet</title>
+    <link rel="stylesheet" href="form-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="form-card emboss">
+            <div class="form-header">
+                <h1>📝 Formulir Registrasi</h1>
+                <p>Data tersimpan otomatis ke Google Spreadsheet</p>
+            </div>
+
+            <form id="modernForm" class="form-grid">
+                <div class="input-group emboss-inset">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" required>
+                    <span class="input-icon">👤</span>
+                </div>
+
+                <div class="input-group emboss-inset">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="input-icon">✉️</span>
+                </div>
+
+                <div class="input-group emboss-inset">
+                    <label for="telepon">Telepon</label>
+                    <input type="tel" id="telepon" name="telepon" required>
+                    <span class="input-icon">📱</span>
+                </div>
+
+                <div class="input-group emboss-inset">
+                    <label for="tanggal">Tanggal Lahir</label>
+                    <input type="date" id="tanggal" name="tanggal" required>
+                    <span class="input-icon">📅</span>
+                </div>
+
+                <div class="input-group full-width emboss-inset">
+                    <label for="alamat">Alamat</label>
+                    <textarea id="alamat" name="alamat" rows="3" required></textarea>
+                    <span class="input-icon">🏠</span>
+                </div>
+
+                <div class="input-group emboss-inset">
+                    <label for="pekerjaan">Pekerjaan</label>
+                    <select id="pekerjaan" name="pekerjaan" required>
+                        <option value="">Pilih Pekerjaan</option>
+                        <option value="Karyawan">Karyawan</option>
+                        <option value="Wiraswasta">Wiraswasta</option>
+                        <option value="Pelajar">Pelajar</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                    <span class="input-icon">💼</span>
+                </div>
+
+                <div class="input-group emboss-inset">
+                    <label for="jenis_kelamin">Jenis Kelamin</label>
+                    <div class="radio-group">
+                        <label class="radio-emboss">
+                            <input type="radio" name="jenis_kelamin" value="Laki-laki" required>
+                            <span>Laki-laki</span>
+                        </label>
+                        <label class="radio-emboss">
+                            <input type="radio" name="jenis_kelamin" value="Perempuan">
+                            <span>Perempuan</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="checkbox-group full-width">
+                    <label class="checkbox-emboss">
+                        <input type="checkbox" id="setuju" required>
+                        <span>Saya menyetujui syarat dan ketentuan</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn emboss" id="submitBtn">
+                    <span class="btn-text">Kirim Formulir</span>
+                    <div class="btn-loader hidden">
+                        <div class="spinner"></div>
+                    </div>
+                </button>
+            </form>
+
+            <div class="success-message hidden" id="successMsg">
+                <div class="success-icon">✅</div>
+                <h3>Berhasil!</h3>
+                <p>Data Anda telah tersimpan di spreadsheet</p>
+                <button type="button" class="btn-emboss" onclick="resetForm()">Isi Lagi</button>
+            </div>
+        </div>
+
+        <div class="stats-card emboss">
+            <h3>📊 Statistik</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalSubmissions">-</div>
+                    <div class="stat-label">Total Pengiriman</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="todaySubmissions">-</div>
+                    <div class="stat-label">Hari Ini</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="form-app.js"></script>
+</body>
+</html>
