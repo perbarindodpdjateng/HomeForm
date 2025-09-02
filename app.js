@@ -1,7 +1,7 @@
 // Konfigurasi Google Spreadsheet
 const CONFIG = {
     // Ganti dengan URL CSV publik dari Google Sheets Anda
-    spreadsheetUrl: 'https://docs.google.com/spreadsheets/d/1yqXIDz2MLAuuCSZVT0LZhx3KIFaMG16s-0K2aD1HJck/gviz/tq?tqx=out:csv&sheet=Sheet1',
+    spreadsheetUrl: 'https://docs.google.com/spreadsheets/d/2PACX-1vS-r3hKHQE7PU2HlEVHbK_dgvVqw0Rmt0hi2l2_QJNWl8pZlPJB-uqY3VU_VeFANFMVEKgd_-s1hMBN/gviz/tq?tqx=out:csv&sheet=Sheet1',
     
     // Cache duration (ms)
     cacheDuration: 300000, // 5 menit
@@ -172,4 +172,5 @@ if ('serviceWorker' in navigator) {
 // Initial load
 document.addEventListener('DOMContentLoaded', () => {
     refreshData();
+
 });
