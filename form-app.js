@@ -1,7 +1,7 @@
 // Konfigurasi Google Apps Script
 const CONFIG = {
     // Ganti dengan URL Web App Anda dari Google Apps Script
-    scriptURL: 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec',
+    scriptURL: 'https://script.google.com/macros/s/AKfycbxdWUoB50YhcInYYmjCS4fZ7I16uOqtjrfFlugwrEbYAY6htmiHtWmevFfudeZ2rD2H/exec',
     
     // Validasi real-time
     validation: {
@@ -243,3 +243,4 @@ window.addEventListener('load', () => {
         }
     }
 });
+
